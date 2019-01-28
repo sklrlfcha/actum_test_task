@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <title>Test task</title>
+    <link href="src/bootstrap/bootstrap.min.css" rel="stylesheet">
+    <link href="src/css/_signin.css" rel="stylesheet">
+    <link href="src/css/_menu.css" rel="stylesheet">
+    <script src="src/js/scripts.js"></script>
+</head>
+<body>
+<header class="header">
+    <div class="d-flex flex-column flex-md-row align-items-center p-3 px-md-4 bg-white border-bottom shadow-sm custom-mobile">
+        <div class="my-0 mr-md-auto font-weight-normal">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="d-block custom-logo-animated" focusable="false" role="img"><title>Product</title><circle cx="12" cy="12" r="10"></circle><line x1="14.31" y1="8" x2="20.05" y2="17.94"></line><line x1="9.69" y1="8" x2="21.17" y2="8"></line><line x1="7.38" y1="12" x2="13.12" y2="2.06"></line><line x1="9.69" y1="16" x2="3.95" y2="6.06"></line><line x1="14.31" y1="16" x2="2.83" y2="16"></line><line x1="16.62" y1="12" x2="10.88" y2="21.94"></line></svg>
+        </div>
+        <div class="navigation__desktop">
+            <nav class="my-2 my-md-0 mr-md-3">
+                <a class="p-2 text-dark" href="#">Features</a>
+                <a class="p-2 text-dark" href="#">Enterprise</a>
+                <a class="p-2 text-dark" href="#">Support</a>
+                <a class="p-2 text-dark" href="#">Pricing</a>
+                <a class="btn btn-outline-primary" href="#">Sign up</a>
+            </nav>
+        </div>
+        <div class="navigation__mobile">
+            <div class="container-menu">
+                <input id="click" name="exit" type="checkbox" />
+                <label for="click"><span class="burger"></span></label>
+                <div class="content__menu-cover">
+                    <a class="p-2 text-dark" href="#">Features</a>
+                    <a class="p-2 text-dark" href="#">Enterprise</a>
+                    <a class="p-2 text-dark" href="#">Support</a>
+                    <a class="p-2 text-dark" href="#">Pricing</a>
+                    <a class="btn btn-outline-primary" href="#">Sign up</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+<section class="content">
+    <form id="form" class="form-signin jumbotron">
+        <h1 class="h3 mb-3 font-weight-normal">Form template</h1>
+
+        <div class="row">
+            <div class="col-md-12 mb-3">
+                <label for="inputName">First name</label>
+                <input type="text" class="form-control" id="inputName" placeholder="" value="" required="" onclick="clearClass(this)">
+                <div class="invalid-feedback">
+                    Valid first name is required.
+                </div>
+            </div>
+            <div class="col-md-12 mb-3">
+                <label for="inputSurname">Last name</label>
+                <input type="text" class="form-control" id="inputSurname" placeholder="" value="" required="" onclick="clearClass(this)">
+                <div class="invalid-feedback">
+                    Valid last name is required.
+                </div>
+            </div>
+            <div class="col-md-12 mb-3">
+                <label for="inputBirthday">Birthday</label>
+                <input type="date" class="form-control" id="inputBirthday" max="2999-12-31" placeholder="" value="" required="" onclick="clearClass(this)" onfocusout="checkBirthday(this)">
+                <div class="invalid-feedback">
+                    Valid date of birth is required.
+                </div>
+            </div>
+            <div class="col-md-12 mb-3">
+                <label for="inputEmail">Email</label>
+                <input type="email" class="form-control" id="inputEmail" placeholder="you@example.com" required="" onclick="clearClass(this)" onfocusout="checkEmail(this)">
+                <div class="invalid-feedback">
+                    Please enter a valid email address for shipping updates.
+                </div>
+            </div>
+            <div class="col-md-12 mb-3">
+                <div id="gender">
+                    <label>Choose your gender</label>
+                    <div class="form-check">
+                        <input id="male" name="paymentMethod" type="radio" class="form-check-input" checked="" required="">
+                        <label class="form-check-label" for="male">I'm Super Man!</label>
+                    </div>
+                    <div class="form-check">
+                        <input id="female" name="paymentMethod" type="radio" class="form-check-input" required="">
+                        <label class="form-check-label" for="female">I'm Wonder Woman!</label>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-12 mb-3">
+                <label for="inputChildren">Number of children</label>
+                <input type="number" class="form-control" id="inputChildren" placeholder="" value="" required="" onclick="clearClass(this)">
+                <div class="invalid-feedback">
+                    Check this field.
+                </div>
+            </div>
+        </div>
+
+        <button type="button" class="btn btn-lg btn-primary btn-block" onclick="checkFields();">Go</button>
+        <!--<button type="button" class="btn btn-lg btn-primary btn-block" onclick="sendData()">Go</button>-->
+    </form>
+</section>
+<footer class="bg-white mt-3">
+    <div class="container py-5">
+        <div class="row">
+            <div class="col-12 col-md">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="d-block mb-2" focusable="false" role="img"><title>Product</title><circle cx="12" cy="12" r="10"></circle><line x1="14.31" y1="8" x2="20.05" y2="17.94"></line><line x1="9.69" y1="8" x2="21.17" y2="8"></line><line x1="7.38" y1="12" x2="13.12" y2="2.06"></line><line x1="9.69" y1="16" x2="3.95" y2="6.06"></line><line x1="14.31" y1="16" x2="2.83" y2="16"></line><line x1="16.62" y1="12" x2="10.88" y2="21.94"></line></svg>
+                <small class="d-block mb-3 text-muted">© 2017-2019</small>
+            </div>
+            <div class="col-6 col-md">
+                <h5>Features</h5>
+                <ul class="list-unstyled text-small">
+                    <li><a class="text-muted" href="#">Cool stuff</a></li>
+                    <li><a class="text-muted" href="#">Random feature</a></li>
+                    <li><a class="text-muted" href="#">Team feature</a></li>
+                    <li><a class="text-muted" href="#">Stuff for developers</a></li>
+                    <li><a class="text-muted" href="#">Another one</a></li>
+                    <li><a class="text-muted" href="#">Last time</a></li>
+                </ul>
+            </div>
+            <div class="col-6 col-md">
+                <h5>Resources</h5>
+                <ul class="list-unstyled text-small">
+                    <li><a class="text-muted" href="#">Resource</a></li>
+                    <li><a class="text-muted" href="#">Resource name</a></li>
+                    <li><a class="text-muted" href="#">Another resource</a></li>
+                    <li><a class="text-muted" href="#">Final resource</a></li>
+                </ul>
+            </div>
+            <div class="col-6 col-md">
+                <h5>Resources</h5>
+                <ul class="list-unstyled text-small">
+                    <li><a class="text-muted" href="#">Business</a></li>
+                    <li><a class="text-muted" href="#">Education</a></li>
+                    <li><a class="text-muted" href="#">Government</a></li>
+                    <li><a class="text-muted" href="#">Gaming</a></li>
+                </ul>
+            </div>
+            <div class="col-6 col-md">
+                <h5>About</h5>
+                <ul class="list-unstyled text-small">
+                    <li><a class="text-muted" href="#">Team</a></li>
+                    <li><a class="text-muted" href="#">Locations</a></li>
+                    <li><a class="text-muted" href="#">Privacy</a></li>
+                    <li><a class="text-muted" href="#">Terms</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</footer>
+</body>
+</html>
